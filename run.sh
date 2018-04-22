@@ -1,3 +1,5 @@
+#!/bin/bash
+
 make clean
 make run-app
 make run-selenium-grid

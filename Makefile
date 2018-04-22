@@ -2,10 +2,10 @@ clean:
 	rm -rf ./allure*
 
 run-app:
-	@docker-compose -f docker-compose.yml up -d
+	@docker-compose -f docker-compose.app.yml up -d
 
 stop-app:
-	@docker-compose stop
+	@docker-compose -f docker-compose.app.yml down
 
 run-selenium-grid:
 	@docker-compose -f docker-compose.qa.yml up -d hub chrome
