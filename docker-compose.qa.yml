@@ -1,0 +1,26 @@
+version: '3'
+
+services:
+  chrome:
+    image: selenium/node-chrome-debug:3.8.1-dubnium
+    depends_on:
+      - hub
+    environment:
+      HUB_HOST: hub
+    volumes:
+      - /dev/shm:/dev/shm
+
+  hub:
+    image: selenium/hub:3.8.1-dubnium
+    ports:
+      - 4444:4444
+
+  tests:
+    image: tests
+    build: ./test
+    depends_on:
+      - chrome
+    environment:
+      TARGET_ENV: docker
+    volumes:
+      - ./allure-results:/app/allure-results

@@ -1,0 +1,31 @@
+{
+  "name": "dataswitch-ui-tests",
+  "version": "1.0.0",
+  "scripts": {
+    "eslint": "eslint",
+    "checkstyle": "eslint ./tests",
+    "test": "protractor",
+    "webdriver-manager": "webdriver-manager"
+  },
+  "description": "DataSwitch E2E tests",
+  "dependencies": {
+    "currency-formatter": "^1.2.1",
+    "faker": "^4.1.0",
+    "jasmine-allure-reporter": "^1.0.1",
+    "jasmine-spec-reporter": "^3.2.0",
+    "lodash": "^4.17.4",
+    "moment": "^2.18.1",
+    "protractor": "^5.1.1",
+    "request-promise": "^4.2.0",
+    "rosie": "^1.6.0",
+    "underscore": "^1.8.3",
+    "url-parse": "^1.1.8"
+  },
+  "devDependencies": {
+    "eslint": "^3.19.0",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-standard": "^2.1.1"
+  },
+  "author": "",
+  "license": "ISC"
+}
