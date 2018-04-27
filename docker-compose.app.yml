@@ -8,6 +8,8 @@ services:
       - 3000:3000
     environment:
       - MONGOHQ_URL=mongodb://mongo/noobjs_dev
+    depends_on:
+      - mongo
 
   mongo:
     image: mongo
