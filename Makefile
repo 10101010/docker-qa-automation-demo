@@ -1,6 +1,10 @@
 clean:
 	rm -rf ./allure*
 
+build:
+	@docker-compose -f docker-compose.app.yml build
+	@docker-compose -f docker-compose.qa.yml build
+
 run-app:
 	@docker-compose -f docker-compose.app.yml up -d
 
