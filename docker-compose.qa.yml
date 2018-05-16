@@ -24,3 +24,11 @@ services:
       TARGET_ENV: docker
     volumes:
       - ./allure-results:/app/allure-results
+
+  allure:
+    image: masterandrey/docker-allure
+    volumes:
+      - ${PWD}/allure-results:/allure-results
+      - ${PWD}/allure-report:/allure-report
+    ports:
+      - 8800:80

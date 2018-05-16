@@ -14,7 +14,7 @@ run-tests:
 	@docker-compose -f docker-compose.qa.yml up tests
 	
 report:
-	@docker run --rm -it -v ${PWD}/allure-results:/allure-results -v ${PWD}/allure-report:/allure-report  masterandrey/docker-allure ./allure generate /allure-results -o /allure-report --clean
+	@docker-compose -f docker-compose.qa.yml run allure ./allure generate /allure-results -o /allure-report --clean
 
 serve:
-	@docker run --rm -it -v ${PWD}/allure-results:/allure-results -v ${PWD}/allure-report:/allure-report -p 8800:80 masterandrey/docker-allure ./allure serve -p 80 /allure-results
+	@docker-compose -f docker-compose.qa.yml run --service-ports allure ./allure serve -p 80 /allure-results
