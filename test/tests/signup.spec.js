@@ -2,8 +2,6 @@ const SignupPage = require('./_pages/signup.page.js');
 
 describe('Sign Up Form', () => {
 
-    const campaignName = 'test campaign';
-
     beforeEach(()=>{
         SignupPage.open()
     });
@@ -16,18 +14,20 @@ describe('Sign Up Form', () => {
             password: '666'
         })
 
-        browser.sleep(5000)
+        SignupPage.signInButton.click();
 
         // expect(CampaignsPage.urlContains('campaign-group'));
     });
 
     it('should display error if password wasnt entered', () => {
-        // SignupPage.registerAs({
-        //     email:
-        //     fullName:
-        //     username:
-        //     password:
-        // })
+        SignupPage.registerAs({
+            email: 'rkiriluk@lineate.com',
+            fullName: 'Ruslan Kirilyuk',
+            username: 'grvxz',
+            password: ''
+        })
+
+        SignupPage.signInButton.click();
 
         // expect(CampaignsPage.urlContains('campaign-group'));
     });

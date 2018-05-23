@@ -7,7 +7,7 @@ class SignUpPage extends basePage {
     get usernameField(){ return element(by.id('username')); }
     get passwordField(){ return element(by.id('password')); }
 
-    // get signInButton() { return element(by.class); }
+    get signInButton() { return element(by.css('.btn.btn-primary')); }
 
     open() {
         browser.driver.get(`${browser.baseUrl}/signup`);
