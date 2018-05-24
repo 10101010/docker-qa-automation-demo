@@ -2,7 +2,7 @@
 
 This repo is intended to demonstrate power of using portable docker-based automation setup. 
 
-Run 'sh start.sh' to run the example. When the scipt is triggered the following will happen:
+Execute 'sh run.sh' to run the example. When the scipt is triggered the following will happen:
 - express.js app will start along with mongo db in separate containers (https://github.com/10101010/node-express-mongoose-demo - my fork original repo, just added Dockerfile there and some parametrizations in configs)
 - selenium server with chrome node will start in background in separate containers
 - protractor based tests will run against the app (hosted in ./test folder)
